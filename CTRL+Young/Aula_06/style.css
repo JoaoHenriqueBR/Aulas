@@ -1,0 +1,78 @@
+/*
+------------------------------------------------------------------------------
+                                Combinadores
+------------------------------------------------------------------------------
+*/
+
+/* Descendentes (espaço)
+
+São todos os elementos que pertencem ao escopo de um outro elemento. 
+Nesse caso h2 pertence ao escopo de uma table */
+table h2 {
+    color: orange;
+}
+
+/* Filhos (>)
+
+todos os elementos que são os filhos imediatos de um elemento especificado.
+Nesse caso p é filho de uma tag div. */
+div > p {
+    background-color: rgba(145, 199, 219, 0.906);
+}
+
+/* Irmão adjacente (+)
+
+Adjacente é o elemento que aparece logo em seguida após um elemento usado de referência.*/
+#PróximoParágrafo + p{
+    font-size: 1.5em;
+}
+
+/* Irmão geral (~)
+
+O seletor irmão geral seleciona todos os elementos que são irmãos de um elemento especificado. 
+São formatados apenas os elementos que forem codificados após o elemento especificado. 
+O exemplo a seguir, seleciona todos as tags <p> que são irmãos de <div>. */
+div ~ p {
+    background-color: rgb(127, 225, 127);
+}
+
+/*
+------------------------------------------------------------------------------
+                        Pseudo-Classes e Pseudo-Elementos
+------------------------------------------------------------------------------
+*/
+
+/* Pseudo-Classe - Hover (:)
+
+Uma pseudo-classe é usada para definir um estado especial de um elemento.
+
+Essa formatação vai deixar o seu site com um efeito dinâmico. 
+Ele é aplicado quando o mouse está por cima de um elemento. */
+img:hover {
+    filter: grayscale(100%);
+}
+
+/* Pseudo-Elemento - First-letter (::)
+
+Já um pseudo-elemento é usado para estilizar partes especificadas de um elemento. */
+p::first-letter {
+    font-size: 3em;
+    color: red;
+}
+
+tr:nth-child(1)
+{
+    background:#887f84;
+    color: white;
+}
+
+tr:nth-child(even)
+{
+    background:#00ff97;
+}
+
+tr:nth-child(odd)
+{
+    background:#887f84;
+
+}

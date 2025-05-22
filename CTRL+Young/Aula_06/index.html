@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Descendentes -->
+    <table>
+        <tr>
+            <th><h2> Eletrônicos </h2></th>
+        </tr>
+        <tr>
+            <td> Computador </td>
+            <td> Celular </td>
+        </tr>
+    </table>
+
+    <!-- Filhos -->
+    <div>
+        <p>Parágrafo 1 no div. (Fundo Azul)</p>
+        <code>código...</code>
+        <p>Parágrafo 2 no div. (Fundo Azul)</p>
+        <center><p>Parágrafo 3 no div. (Sem Fundo por causa do center)</p></center>
+        <!-- Observe que o terceiro parágrafo não é formatado, pois ele não é “filho direto” de <div>, na verdade ele é filho de <center> e apenas descendente de <div>. -->
+    </div>
+
+    <!-- Irmão Geral -->
+    <!-- Todos os "irmãos", ou seja, os elementos <p> que ocorrem após a <div> estão formatados -->
+    <p>Parágrafo 4. Não está no div.</p>
+    <code>código...</code>
+    <p>Parágrafo 5. Não está no div.</p>
+
+    <!-- Irmão Adjacente -->
+    <!-- Apenas o <p> adjacente ao elemento de referência (#PróximoParágrafo) está formatado.-->
+    <br id="PróximoParágrafo">
+    <p>Parágrafo 6. Adjacente.</p>
+    <p>Parágrafo 7. Não adjacente</p>
+
+    <img src="https://www.arqtricolor.com/wp-content/uploads/2023/10/messi-sao-paulo.webp" alt="">
+
+    <h1>Tabela do Brasileirão</h1>
+
+    <table border="1">
+      <tr>
+        <th> Posição </th>
+        <th> Clubes </th>
+        <th> Pontos </th>
+      </tr>
+
+      <tr>
+        <td> 1 </td>
+        <td> 
+          <img src="https://ssl.gstatic.com/onebox/media/sports/logos/KLDWYp-H8CAOT9H_JgizRg_48x48.png">
+          Botafogo
+        </td>
+        <td> 50 </td>
+      </tr>
+
+      <tr>
+        <td> 2 </td>
+        <td> 
+          <img src="https://ssl.gstatic.com/onebox/media/sports/logos/me10ephzRxdj45zVq1Risg_48x48.png">
+          Fortaleza
+        </td>
+        <td> 48 </td>
+      </tr>
+
+      <tr>
+        <td> 3 </td>
+        <td> 
+          <img src="https://ssl.gstatic.com/onebox/media/sports/logos/7spurne-xDt2p6C0imYYNA_48x48.png">
+          Palmeiras
+        </td>
+        <td> 47 </td>
+      </tr>
+
+
+    </table>
+</body>
+</html>
