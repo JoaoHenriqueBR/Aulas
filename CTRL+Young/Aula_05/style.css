@@ -1,0 +1,29 @@
+#p_teste{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10mm;
+  font-style: italic;
+  color: brown;
+  font-weight: bold;
+}
+
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-bottom: solid;
+}
+
+.joaozinho123{
+  font-style: italic;
+  font-size: 10em;
+  border-bottom: solid;
+}
+
+#div1{
+  background-color: red;
+  width: 500px;
+}
+
+#div2{
+  background-color: black;
+  color: white;
+  width: 500px;
+}
