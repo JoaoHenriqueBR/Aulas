@@ -1,0 +1,55 @@
+header {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Comentários em CSS */
+
+/* Definindo uma barra de navegação para o topo do site */
+.topnav {
+    overflow: hidden;
+    background-color: orange;
+}
+
+/* Formatando links descendentes da barra de navegação */
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Os links trocam a cor quando o mouse está por cima */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #f2f2f2;
+}
+
+/* Cria três colunas iguais, uma do lado da outra */
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Coluna da esquerda e da direita */
+.column.side {
+    width: 25%;
+}
+
+.column.middle {
+    width: 50%;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
