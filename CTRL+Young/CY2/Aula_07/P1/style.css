@@ -1,0 +1,37 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Expressões regulares */
+
+/* 
+Como o nome indica, as expressões regulares descrevem os padrões (regularidades) de texto em um formato.
+Ao combinar configurações CSS com expressões regulares, você vai poder selecionar e restringir elementos que desejar aplicar uma determinada formatação.
+*/ 
+
+/*
+elemento[atributo OPERADOR valor]{
+    instruções CSS
+    ...
+}
+*/
+
+
+img[src="img/barcelona.png"]{
+    width: 100px;
+    height: 100px;
+}
+
+img[src="img/acmilan.png"]{
+    width: 72px;
+    height: 114px;
+}
+
+img[src="img/Liverpool.png"]{
+    width: 170px;
+    height: 100px;
+}
