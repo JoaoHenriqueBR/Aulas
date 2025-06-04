@@ -1,0 +1,31 @@
+@keyframes animacao{
+    from{
+        background: orange;
+        border-radius: 0px;
+        top: 0px;
+        left: 0px;
+    }
+    to{
+        background: blue;
+        border-radius: 200px;
+        top: 100px;
+        left: 800px;
+        color: white;
+    }
+}
+
+#box{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding-top: 50px;
+    background: orange;
+    position: relative;
+    animation: animacao 10s 2s 3 alternate;
+}
+
+#box:hover{
+    width: 500px;
+    background: blue;
+    transition: background 3s, width 5s;
+}
