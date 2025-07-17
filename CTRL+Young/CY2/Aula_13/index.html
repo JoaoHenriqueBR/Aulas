@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição</title>
+</head>
+<body>
+    <!-- While -->
+     <script language="javascript" type="text/javascript">
+        // Variáveis
+        var numero = 0;
+        var resultado = 0;
+        
+        // Repetição while
+        // Enquanto número for diferente de (-1)
+        while(numero != -1){
+            // vai ser somado (a cada repetição) o valor de numero ao resultado
+            resultado += numero
+
+            // pergunta por um novo número
+            numero = prompt("Digite um número (-1 para cancelar)");
+            // Transforma em um número inteiro
+            numero = parseInt(numero);
+        }
+
+        // O resultado é escrito ao final
+        document.write("Resultado da soma: " + resultado);
+
+
+        document.write("<table border=1>");
+        // Repetição for
+        // Para uma quantidade determinada de vezes (i)
+        for(var i=0; i < 5; i++) {
+            // Vou criar uma linha da tabela
+            document.write("<tr>");
+                document.write("<td>");
+                    document.write("Pão");    
+                document.write("</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+     </script>
+</body>
+</html>
