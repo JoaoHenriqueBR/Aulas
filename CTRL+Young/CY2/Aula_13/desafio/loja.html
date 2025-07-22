@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ctrl+Play Store</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>
+          <p>Produto</p>
+        </td>
+        <td>
+          <p>Preço</p>
+        </td>
+      </tr>
+      <script lang="javascript" type="text/javascript">
+        var loja = [];
+        var i = 0;
+        loja["produto"] = [];
+        loja["preco"] = [];
+
+        do {
+          var nome = prompt("Digite o nome do produto: ");
+          var preco = prompt("Preço do produto: R$ ");
+          preco = parseFloat(preco);
+
+          loja["produto"][i] = nome;
+          loja["preco"][i] = preco;
+
+          i++;
+          var resp = prompt("Deseja continuar? (s/n)");
+        } while (resp != "n");
+
+        while (i > 0) {
+          i--;
+          document.write("<tr>");
+          document.write("<td>");
+          document.write(loja["produto"][i]);
+          document.write("</td>");
+          document.write("<td>");
+          document.write(loja["preco"][i]);
+          document.write("</td>");
+          document.write("</tr>");
+        }
+      </script>
+    </table>
+  </body>
+</html>

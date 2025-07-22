@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Minado com JS</title>
+</head>
+<body>
+    <script lang="javascript" type="text/javascript">
+        var campo = [];
+        bomba = "Game Over!";
+        mar = 0;
+
+        campo[1] = [mar, bomba, mar, bomba, mar];
+        campo[2] = [mar, mar, mar, mar, mar];
+        campo[3] = [bomba, mar, mar, bomba, mar];
+        campo[4] = [mar, mar, mar, mar, bomba];
+
+        while (mar < 3) {
+            linha = prompt("Digite uma linha: ");
+            coluna = prompt("Digite uma coluna: ")
+            if (campo[linha][coluna] == bomba){
+                document.write(bomba);
+                break;
+            } else{
+                mar++;
+            }
+        }
+        if (mar == 3){
+            document.write("Parabéns!")
+        }
+    </script>
+</body>
+</html>
