@@ -3,6 +3,8 @@ var serieFavorita = "Fallout";
 var serieInteressante = "Stranger Things";
 var serieMuitoBoa = "Invincible"
 
+document.write("O final de" + serieFavorita + "é")
+
 // Arrays
 /* Existem duas formas de se criar */
 
@@ -14,10 +16,11 @@ var series = [];
 series[0] = "Fallout";
 series[1] = "Stranger Things";
 series[2] = "Invincible";
+series[3] = "Narutinho";
 
 // Acessar conteúdo de uma array
-var invencivel = series[2];
-document.write(invencivel);
+serieFavorita = series[1];
+document.write(serieFavorita);
 
 /* 
 --- Copiar ---
