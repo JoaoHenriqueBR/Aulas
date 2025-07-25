@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function areaDoRetangulo (largura, comprimento){
+            var area = largura * comprimento;
+            document.write(area);
+        }
+
+        function areaDoQuadrado(lado) {
+            lado = parseInt(lado);
+            var area = lado**2;
+            return area;
+        }
+
+        areaDoRetangulo(10, 2);
+        document.write("<br>")
+        document.write("A area do quadrado é: "+ areaDoQuadrado(5) + " centimentros quadrados");
+        document.write("<br>")
+
+        tamanho = areaDoQuadrado(prompt("Digite um lado do seu quadrado: "))
+        document.write("Seu quadrado tem: "+tamanho+"cm²")
+
+        function mensagemQuadrado(){
+            alert("Você clicou no quadrado.");
+        }
+
+        function teclaPressionada(event) {
+            var x = event.key;
+            document.getElementById("texto").innerHTML = "tecla pressionada: " + x;
+        }
+
+        
+    </script>
+    
+    <div onclick="mensagemQuadrado()" style="background: green; width: 100px;">
+        Quadrado
+    </div>
+
+    <input type="text" size="40" onkeydown="teclaPressionada(event)">
+
+    <p id="texto"></p>
+</body>
+</html>
