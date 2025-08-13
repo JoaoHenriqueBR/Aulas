@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Selecionando por Marca</h1>
+    <p>paragráfo 1</p>
+    <p>paragráfo 2</p>
+    
+    <script>
+        // Seleciona por tags
+        let paragrafos = document.getElementsByTagName('p');
+        console.log(paragrafos);
+    </script>
+
+    <br>
+
+    <h1>Selecionando por ID</h1>
+    <p id="p1">paragráfo 1</p>
+    <p>paragráfo 2</p>
+
+    <script>
+        // Seleciona por ID
+        let paragrafo = document.getElementById('p1');
+        console.log(paragrafo);
+    </script>
+
+    <br>
+
+    <h1>Selecionando por Nome</h1>
+    <p>paragráfo 1</p>
+    <p name='p2'>paragráfo 2</p>
+
+    <script>
+        // Seleciona pelo Nome
+        // Diferente dos outros, seleciona todos os elementos identificados pelo nome ('p2'), dentre eles, seleciona o primeiro[0]
+        let paragrafo2 = document.getElementsByName('p2')[0];
+        console.log(paragrafo2)
+    </script>
+
+    <br>
+
+    <h1>Selecionando pelo nome da classe</h1>
+    <p class="p1">paragráfo 1</p>
+    <p>paragráfo 2</p>
+
+    <script>
+        // Seleciona pela classe
+        let classe = document.getElementsByClassName('p1')
+        console.log(classe)
+    </script>
+
+    <br>
+
+    <!-- Seletores -->
+     <h1>Selecionando por nome</h1>
+     <p class="p1">paragráfo 1</p>
+     <p>paragráfo 2</p>
+
+     <script>
+        /*
+        Na seleção de elementos por seletor, há dois métodos:
+
+        - querySelector()
+        - querySelectorAll()
+        
+        Com o primeiro, você seleciona um único elemento; 
+        
+        Com o segundo, você seleciona múltiplos elementos (uma coleção de elementos que correspondem ao seletor especificado).
+        */
+        let selecionado = document.querySelector('p.p1');
+        console.log(selecionado)
+     </script>
+</body>
+</html>
