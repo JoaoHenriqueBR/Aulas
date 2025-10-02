@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Enigma dos Eventos</title>
+</head>
+<body>
+    <img id="botaoEntrada" src="https://tse2.mm.bing.net/th/id/OIP.vqxNW-U1fnuE6F6hUZ-ItQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+    <script>
+        function saudacao() {
+            alert("Bem-vindo a taberna!")
+        }
+
+        let botao = document.getElementById("botaoEntrada");
+        botao.addEventListener("click", saudacao);
+    </script>
+
+    <p id="caixaMisteriosa" style="background-color: black; width: 500px; height: 500px; text-align: center; font-size: 4em;">Você ganhou 2 kwanzas!</p>
+    
+    <script>
+        function mudarCor(evento) {
+            evento.target.style.backgroundColor = "purple";
+        }
+
+        let caixa = document.getElementById("caixaMisteriosa");
+        caixa.addEventListener("mouseover", mudarCor);
+    </script>
+</body>
+</html>
