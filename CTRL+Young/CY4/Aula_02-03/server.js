@@ -28,3 +28,14 @@ if (index !== -1){
 }
 
 console.log(movies)
+
+const express = require('express'); // Importa o Express
+const app = express(); // Cria uma aplicação Express
+app.use(express.json()); // Permite trabalhar com dados JSON
+
+// Inicia o servidor na porta 3000
+app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
+
+app.get('/read', (req, res) => {
+    res.status(200).json(movies);
+});
