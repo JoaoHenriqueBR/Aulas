@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREINAMENTO HARDCORE</title>
+</head>
+<body>
+    <h1><center>SELEÇÃO BRASILEIRA DE MOBA</center></h1>
+    <h2><center>Bem vindo ao nosso Treinamento!</center></h2>
+    <script>
+        function teclaPressionada(event){
+            var x = event.key;
+            if (x in 'QWER'){
+                acao = "Habilidade do " + x
+            } else if (x in 'DF'){
+                acao = "Feitiço de Invocador do " + x 
+            } else if (x in '1234567'){
+                acao = "Atalho para o Item " + x
+            }
+            document.getElementById("texto").innerHTML = "Ação realizada: " + acao;
+        }
+        
+    </script>
+</body>
+</html>
