@@ -6,6 +6,8 @@ const validateTitle = (req, res, next) => {
       error: "O título é obrigatório e deve ter pelo menos 3 caracteres.",
     });
   }
+
+  next();
 };
 
 module.exports = validateTitle;

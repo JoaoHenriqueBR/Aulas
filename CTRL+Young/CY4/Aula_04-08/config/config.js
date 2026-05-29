@@ -5,7 +5,7 @@ const connectDB = async () => {
         await mongoose.connect('mongodb://localhost:27017/minhaLivrariaDB');
         console.log('MongoDB conectado!');
     } catch(err) {
-        console.error('Erro ao conectado ao MongoDB:', err);
+        console.error('Erro ao conectar ao MongoDB:', err);
         process.exit(1);
     }
 };

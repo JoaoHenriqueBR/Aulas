@@ -16,5 +16,9 @@ app.use((err,req,res,next) => {
     res.status(500).json({ error: "Ocorreu um erro no servidor." });
 })
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./docs/swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(3000, () => console.log("Server running on port 3000"));
