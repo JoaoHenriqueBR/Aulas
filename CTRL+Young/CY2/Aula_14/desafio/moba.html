@@ -8,19 +8,24 @@
 <body>
     <h1><center>SELEÇÃO BRASILEIRA DE MOBA</center></h1>
     <h2><center>Bem vindo ao nosso Treinamento!</center></h2>
+    <p>Pressione as teclas do jogo (Q, W, E, R, D, F ou 1-7) para treinar.</p>
+    <br>
+    <h3 id="texto">Ação realizada: Nenhuma</p>
     <script>
-        function teclaPressionada(event){
-            var x = event.key;
-            if (x in 'QWER'){
+        window.addEventListener('keydown', function(event) {
+            var x = event.key.toUpperCase();
+            var acao = "";
+            if ('QWER'.includes(x)){
                 acao = "Habilidade do " + x
-            } else if (x in 'DF'){
+            } else if ('DF'.includes(x)){
                 acao = "Feitiço de Invocador do " + x 
-            } else if (x in '1234567'){
+            } else if ('1234567'.includes(x)){
                 acao = "Atalho para o Item " + x
+            } else {
+                acao = "Tecla inválida para o treinamento!"
             }
             document.getElementById("texto").innerHTML = "Ação realizada: " + acao;
-        }
-        
+        });
     </script>
 </body>
 </html>
