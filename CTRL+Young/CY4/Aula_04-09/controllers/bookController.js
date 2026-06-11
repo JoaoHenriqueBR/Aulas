@@ -11,9 +11,31 @@ const createBook = async (req, res) => {
   }
 };
 
-const getBooks = async (_req, res) => {
+const getBooks = async (req, res) => {
   try {
-    const books = await Book.find();
+    let query = {};
+    if (req.query.title){
+      query.title = { $regex: req.query.title, $options: "i" };
+    }
+    if (req.query.author) {
+      query.author = req.query.author;
+    }
+    if (req.query.genre) {
+      query.genre = req.query.genre;
+    }
+
+    let sort = {};
+    if (req.query.sortBy) {
+      const sortField = req.query.sortBy;
+      const sortOrder = req.query.order === 'desc' ? -1 : 1;
+      sort[sortField] = sortOrder;
+    }
+
+    const pageNumber = parseInt(req.query.pageNumber) || 1;
+    const pageSize = parseInt(req.query.pageSize) || 5;
+    const skip = (pageNumber - 1) * pageSize;
+
+    const books = await Book.find(query).sort(sort).skip(skip).limit(pageSize);
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: "Erro ao buscar livros" });

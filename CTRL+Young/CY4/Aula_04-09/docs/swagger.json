@@ -1,0 +1,139 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Biblioteca Digital API",
+    "description": "Documentação da API da Biblioteca Digital"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/books": {
+      "post": {
+        "summary": "Criar um novo livro",
+        "description": "Adicionar um novo livro à biblioteca digital.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados do livro a ser criado",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "example": "Chapeuzinho-Vermelho"
+                },
+                "author": {
+                  "type": "string",
+                  "example": "Ana Maria Braga"
+                },
+                "year": {
+                  "type": "integer",
+                  "example": 2002
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "Romance"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Livro criado com sucesso"
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      },
+      "get": {
+        "summary": "Lista todos os livros",
+        "description": "Retorna todos os livros da biblioteca digital",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "description": "Filtrar por titulo do livro",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "author",
+            "in":"query",
+            "description":"Filtrar por autor do livro",
+            "required":false,
+            "type":"string"
+          },
+          {
+            "name": "genre",
+            "in": "query",
+            "description":"Filtrar por gênero de livro",
+            "required":false,
+            "type":"string"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Número da página a ser retornada",
+            "required": false,
+            "type":"integer"
+          },
+          {
+            "name": "pageSize",
+            "in":"query",
+            "description":"Quantidade de resultados por página",
+            "required":false,
+            "type":"integer"
+          },
+          {
+            "name":"sortBy",
+            "in":"query",
+            "description":"Campo pelo qual os resultados serão ordenados (ex: title, year, author)",
+            "required":false,
+            "type":"string"
+          },
+          {
+            "name":"order",
+            "in":"query",
+            "description":"Ordem de classificação: 'asc' para crescente, 'desc' para decrescente",
+            "required":false,
+            "type":"string",
+            "enum": ["asc", "desc"]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de livros recuperada com sucesso",
+            "schema":{
+              "type":"array",
+              "items": {
+                "type": "object",
+                "properties":{
+                  "id": {
+                    "type": "string",
+                    "example": "adsihfiq32ph2gd39p"
+                  },
+                  "title":{
+                    "type":"string",
+                    "example":"Chapeuzinho-Vermelho"
+                  },
+                  "author": { "type":"string", "example": "Ana Maria Braga" },
+                  "year": { "type":"integer", "example":2002 },
+                  "genre": { "type":"string", "example":"Romance" }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    }
+  }
+}

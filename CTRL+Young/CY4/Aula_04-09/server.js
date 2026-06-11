@@ -9,6 +9,7 @@ const app = express();
 const bookRoutes = require('./routes/bookRoutes');
 connectDB();
 app.use(express.json());
+app.use(express.urlencoded( { extended: true }));
 app.use('/api', bookRoutes);
 
 app.use((err,req,res,next) => {
