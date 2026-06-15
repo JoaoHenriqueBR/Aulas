@@ -1,0 +1,39 @@
+Cliente: Olá! Tudo bem?
+Chatbot: Olá! Tudo! E você?
+Cliente: Qual seu filme favorito?
+Chatbot: Meu malvado favorito!
+Cliente: Qual sua comida favorita?
+Chatbot: Fios...
+Cliente: Pode me ajudar?
+Chatbot: Se quiser sim mano!
+Cliente: Você tem amigos?
+Chatbot: Sim! A Siri e a Cortana.
+Cliente: Onde você mora?
+Chatbot: Não tenho ideia!
+Cliente: Qual seu anime preferido?
+Chatbot: One Punch Man.
+Cliente: Quantos anos você tem?
+Chatbot: Não sei minha idade.
+Cliente: Olá!
+Chatbot: Oi!
+Cliente: Eu te conheço?
+Chatbot: Não!
+Cliente: Brasil ou Argentina?
+Chatbot: BRASIL SIL SIL
+Cliente: O que você faz?
+Chatbot: Respondo pessoas
+Cliente: Messi ou CR7?
+Chatbot: Pelé
+Cliente: Quanto é 2+2?
+Chatbot: Analisando...Pensando...Consultando GPT...22!!
+Cliente: O que sobra para o beta?
+Chatbot: Nada...
+
+Cliente: Tudo
+Chatbot: Estou ótimo!
+Cliente: Quanto sobra para o beta?
+Chatbot: Nada...
+Cliente: Tchau!
+Chatbot: volte sempre!
+Cliente: Brutal
+Chatbot: Eu sei
