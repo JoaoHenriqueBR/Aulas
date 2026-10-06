@@ -1,0 +1,83 @@
+{
+ "openapi": "3.0.0",
+ "info": {
+   "title": "API com Autenticação",
+   "version": "1.0.0",
+   "description": "API com autenticação JWT"
+ },
+ "components": {
+   "securitySchemes": {
+     "bearerAuth": {
+       "type": "http",
+       "scheme": "bearer",
+       "bearerFormat": "JWT"
+     }
+   }
+ },
+ "security": [
+   {
+     "bearerAuth": []
+   }
+ ],
+ "paths": {
+   "/api/login": {
+     "post": {
+       "summary": "Autenticação de usuário",
+       "requestBody": {
+         "required": true,
+         "content": {
+           "application/json": {
+             "schema": {
+               "type": "object",
+               "properties": {
+                 "email": {
+                   "type": "string"
+                 },
+                 "password": {
+                   "type": "string"
+                 }
+               }
+             }
+           }
+         }
+       },
+       "responses": {
+         "200": {
+           "description": "Login bem-sucedido"
+         },
+         "401": {
+           "description": "Credenciais inválidas"
+         }
+       }
+     }
+   },
+   "/api/perfil": {
+     "get": {
+       "summary": "Acesso ao perfil do usuário",
+       "security": [{ "bearerAuth": [] }],
+       "responses": {
+         "200": {
+           "description": "Acesso permitido"
+         },
+         "403": {
+           "description": "Acesso proibido"
+         }
+       }
+     }
+   },
+   "/api/admin": {
+     "get": {
+       "summary": "Acesso ao perfil de administrador",
+       "security": [{ "bearerAuth": [] }],
+       "responses": {
+         "200": {
+           "description": "Acesso permitido"
+         },
+         "403": {
+           "description": "Acesso proibido"
+         }
+       }
+     }
+   }
+ }
+}

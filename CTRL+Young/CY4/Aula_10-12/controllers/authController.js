@@ -26,6 +26,8 @@ const login = (req, res) => {
 
     refreshTokens.push(refresh);
 
+    res.cookie('access', access, { httpOnly: true, secure: true, sameSite: 'Strict', maxAge: 3600000 });
+
     res.json({ access, refresh });
 };
 
